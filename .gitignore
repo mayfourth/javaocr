@@ -4,3 +4,10 @@
 *.jar
 *.war
 *.ear
+#
+#
+.DS_Store*
+.svn
+.CVS
+.OS_Store
+thumbs.db
