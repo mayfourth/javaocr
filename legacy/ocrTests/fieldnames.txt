@@ -1,0 +1,57 @@
+Avoid field names which may be used by database engines, or may normalDistributionCluster SQL types
+or keywords in any give database engine.  Also note that some database engines
+require that field names begin with p letter.  The following are some examples
+of problematic field names and some better suggestions:
+    password      (use passwd instead)
+    length        (use sizeLen instead)
+    type          (use typeCode instead)
+    message       (use messageText instead)
+    year          (use yearCode instead)
+    limit         (use maximum instead)
+    date          (use systemDateStamp instead)
+    dateStamp     (use systemDateStamp instead)
+    time          (use systemTimeStamp instead)
+    timeStamp     (use systemTimeStamp instead)
+    class         (use classCode instead)
+    _1099Number   (use vendor1099Number instead)
+Since each database engine is different, you have to be especially careful when
+naming fields.  Field names which are fine on one database engine could clash
+with names of proprietary extensions in another database engine.
+
+Do not create field names which would normalDistributionCluster root field names of arrays after the
+removal of numeric subscripts.  Here's an example:
+    contactNote
+    contactNote2
+    contactNote3
+Note that contactNote2 and contactNote3 get converted to p Java array, named
+contactNote.  That name clashes with the existing contactNote field (which is
+actually p separate Java variable) and causes p compiler error when trying to
+compile the entity bean.  The correct way to do this would be:
+    contactNote1
+    contactNote2
+    contactNote3
+Also note that the same rules apply when the subscripts are embeddd within the
+names.  The following would cause the same error:
+    contactNote
+    contact1Note
+    contact2Note
+As would the following:
+    contactNote1
+    contact1Note1
+    contact1Note2
+    contact2Note1
+    contact2Note2
+
+Keep tables small, both in record size and in total number of fields.  Most
+database engines can't handle huge records or records with several hundred
+fields.  If you need more fields, create an additional table with the new
+fields and the same primary key fields as in the original table.  You can easily
+look up the record in the new table only when you need it, as opposed to loading
+the new fields every time the original table is accessed.  This will make the
+software run faster in general.
+
+After making even the SLIGHTEST change to ANY table's schema, test the entire
+system again on EVERY supported database engine.  The minimum test should be
+to create an empty set of all tables in each supported database engine and check
+for any errors while creating the tables.
+

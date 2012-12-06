@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+    <SurfaceView android:id="@+id/preview"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:layout_weight="1"
+                 android:gravity="top"
+            />
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <!-- left strut   -->
+
+        <ImageView android:layout_width="60dp"
+                   android:layout_height="fill_parent"
+                   android:background="#00000000"
+                   android:layout_weight="0"
+                />
+
+        <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                >
+            <!-- central area -->
+
+            <!-- display processing result -->
+            <ImageView android:id="@+id/workarea"
+                       android:layout_width="fill_parent"
+                       android:layout_height="70dp"
+                    >
+
+
+            </ImageView>
+
+            <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place text inside border:"
+                    android:textSize="15dp">
+
+            </TextView>
+            <ImageView
+                    android:id="@+id/scanarea"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/scanarea"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_gravity="center"
+                    >
+            </ImageView>
+
+            <TextView android:id="@+id/recognitionResult"
+                      android:layout_gravity="center"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:text="result..."
+                      android:textColor="#ff000000"
+                      android:background="#ffffffff"
+                      android:textSize="20dp">
+            </TextView>
+
+
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:background="#00000000"
+                          android:orientation="horizontal"
+                    >
+
+                <Button android:id="@+id/snap"
+                        android:textSize="30dp"
+                        android:text="Snap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- right strut   -->
+
+        <ImageView android:layout_width="60dp"
+                   android:layout_height="fill_parent"
+                   android:background="#00000000"
+                   android:layout_weight="0"
+                />
+
+    </LinearLayout>
+
+
+</FrameLayout>

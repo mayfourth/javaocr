@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.sourceforge.javaocr.plugins</groupId>
+        <artifactId>javaocr-plugins-parent</artifactId>
+        <version>1.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>javaocr-plugin-cluster</artifactId>
+    <name>Cluster analyse plugin</name>
+    <description>
+        Performs image matching based on cluster analysis techniques. Uses commons-math
+        for matrix computations
+    </description>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math</artifactId>
+            <version>2.1</version>
+        </dependency>        
+    </dependencies>
+</project>

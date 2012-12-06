@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">JavaOCR Demo recognition app</string>
+    <string name="recognitionFailed">Recognition failed. See logcat</string>
+</resources>

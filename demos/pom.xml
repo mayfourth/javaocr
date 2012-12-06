@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.sourceforge.javaocr</groupId>
+        <artifactId>javaocr-parent</artifactId>
+        <version>1.1-SNAPSHOT</version>
+    </parent>
+    <groupId>net.sourceforge.javaocr.demos</groupId>
+    <artifactId>javaocr-demos-parent</artifactId>
+    <packaging>pom</packaging>
+    <name>Parent project for javaocr demos</name>
+    <description>
+        Master project for JavaOCR demos
+    </description>
+    <modules>
+        <module>camera-utils</module>
+        <module>sampler</module>
+        <module>trainer</module>
+        <module>recognizer</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>net.sourceforge.javaocr</groupId>
+            <artifactId>javaocr-core</artifactId>
+            <version>${pom.version}</version>
+        </dependency>
+             <dependency>
+            <groupId>net.sourceforge.javaocr.plugins</groupId>
+            <artifactId>javaocr-plugin-moment</artifactId>
+            <version>${pom.version}</version>
+        </dependency>
+    </dependencies>
+</project>

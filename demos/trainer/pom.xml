@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.sourceforge.javaocr.demos</groupId>
+        <artifactId>javaocr-demos-parent</artifactId>
+        <version>1.1-SNAPSHOT</version>
+    </parent>
+    <groupId>net.sourceforge.javaocr.demos</groupId>
+    <artifactId>javaocr-trainer</artifactId>
+    <packaging>jar</packaging>
+    <name>Android trainer</name>
+    <description>
+        small demo application showcasing training of matchers. writed JSON
+        configurations to be used in recognizer
+    </description>
+    <dependencies>
+        <dependency>
+            <groupId>net.sourceforge.javaocr</groupId>
+            <artifactId>javaocr-core</artifactId>
+            <version>${pom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.javaocr.demos</groupId>
+            <artifactId>javaocr-android-camera-utils</artifactId>
+            <version>${pom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>de.pribluda.android</groupId>
+            <artifactId>jsonmarshaller</artifactId>
+            <version>0.6</version>
+        </dependency>
+    </dependencies>
+</project>

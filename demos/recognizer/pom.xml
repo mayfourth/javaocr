@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.sourceforge.javaocr.demos</groupId>
+        <artifactId>javaocr-demos-parent</artifactId>
+        <version>1.1-SNAPSHOT</version>
+    </parent>
+    <groupId>net.sourceforge.javaocr.demos</groupId>
+    <artifactId>javaocr-recognizer</artifactId>
+    <packaging>apk</packaging>
+    <name>Android recognizer</name>
+    <description>
+        Android demo app demonstrating image recognition with javaocr library.
+        Recogniyion config shall be produced via trainer application, from samples gatehred by
+        sampler app
+    </description>
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <sdk>
+                        <platform>7</platform>
+                    </sdk>
+                    <emulator>
+                        <avd>16</avd>
+                    </emulator>
+                    <deleteConflictingFiles>true</deleteConflictingFiles>
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                </configuration>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>2.1_r1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.javaocr</groupId>
+            <artifactId>javaocr-core</artifactId>
+            <version>${pom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.javaocr.plugins</groupId>
+            <artifactId>javaocr-plugin-moment</artifactId>
+            <version>${pom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.javaocr.plugins</groupId>
+            <artifactId>javaocr-plugin-cluster</artifactId>
+            <version>${pom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.javaocr.demos</groupId>
+            <artifactId>javaocr-android-camera-utils</artifactId>
+            <version>${pom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>de.pribluda.android</groupId>
+            <artifactId>jsonmarshaller</artifactId>
+            <version>0.6</version>
+        </dependency>
+    </dependencies>
+</project>
